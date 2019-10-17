@@ -26,12 +26,19 @@ if(isset($_REQUEST['cadastrar']))
         $stml->bindParam(10, $_REQUEST['cep']);
         $stml->execute();
 
+        echo "Aluno inserido com sucesso!";
+
     } catch(Exception $e) {
         echo $e->getMessage();
     }
 }
 ?>
 <link href="css/estilos.css" type="text/css" rel="stylesheet" />
+
+<script type="text/javascript" src="js/validacao_cad_aluno.js"></script>
+
+<?php include_once 'includes/cabecalho.php' ?>
+
 <div>
 <fieldset>
     <legend>Cadastro de Aluno </legend>
